@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
+import {Route, BrowserRouter as Router} from 'react-router-dom'
 import Addpage from './Addpage';
 import Editpage from './Editpage';
 import Detailspage from './Detailspage';
@@ -9,11 +9,6 @@ import Header from './Header'
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-
   render(){
     return (
       <>

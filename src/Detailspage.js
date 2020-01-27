@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import MaterialIcon from 'material-icons-react';
 
 
 class Details extends React.Component {

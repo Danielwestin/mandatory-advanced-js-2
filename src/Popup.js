@@ -6,11 +6,6 @@ import ReactDOM from 'react-dom';
 
 
 class Add extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-
 
   render(){
     return ReactDOM.createPortal(

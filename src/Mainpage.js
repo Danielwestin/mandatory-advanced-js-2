@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios'
-import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { Helmet } from 'react-helmet';
-import MaterialIcon, {colorPalette} from 'material-icons-react';
+import MaterialIcon from 'material-icons-react';
 import Popup from './Popup';
 
 
@@ -92,7 +92,7 @@ class Main extends React.Component {
             if (movie.title.toLowerCase().includes(this.state.filter)
              ||
                 movie.director.toLowerCase().includes(this.state.filter)){
-              return movie
+              return movie;
             }
           })
           .map(movie =>
