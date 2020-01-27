@@ -72,6 +72,7 @@ componentDidMount = () => {
             }
           }}>
             <MaterialIcon color="#FFFFFF" icon="edit"/>
+            <p>Edit</p>
           </Link>
         </button>
          <ul>

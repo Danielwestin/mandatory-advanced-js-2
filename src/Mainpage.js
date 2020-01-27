@@ -138,7 +138,7 @@ class Main extends React.Component {
                     })
                     .catch(() => {
                       console.log("movie is already gone");
-                      this.setState({deleteError: true})
+                      this.getMovies();
                     })
                   }}>
                   <MaterialIcon color="#FFFFFF" icon="delete_forever"/>

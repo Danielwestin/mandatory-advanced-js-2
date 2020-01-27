@@ -23,8 +23,8 @@ class Header extends React.Component {
           </div>
 
           <div className="links">
-            <Link className="margin" to="/"> Main page </Link>
-            <Link className="margin" to="/addpage">Addpage</Link>
+            <Link className="link-margin" to="/"> Main page </Link>
+            <Link className="link-margin" to="/addpage">Addpage</Link>
           </div>
 
         </header>

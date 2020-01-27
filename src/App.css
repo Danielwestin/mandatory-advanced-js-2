@@ -1,3 +1,4 @@
+/*-------------------------APPLY TO ALL---------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,8 @@
 body{
   background-color: black;
 }
+
+/*-------------------------MAIN-PAGE-LINKS---------------------------- */
 .links{
   background-color: black;
   font-size: 34px;
@@ -24,6 +27,9 @@ body{
   color: orange;
 }
 
+
+/*-------------------------HEADER---------------------------- */
+
 .header{
   width: 100%;
   height: 100vh;
@@ -32,7 +38,16 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-color: black;
+}
 
+.gradient{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: radial-gradient(circle at 50% -60% ,transparent, black 85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-text{
@@ -41,6 +56,9 @@ body{
   font-size: 130px;
   color: white;
 }
+
+
+/*-------------------------MOVIES IN TABLE---------------------------- */
 
 a{
   color: white;
@@ -54,19 +72,11 @@ color: orange;
 transform: scale(1.2);
 }
 
-.gradient{
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background: radial-gradient(circle at 50% -60% ,transparent, black 85%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.margin{
+.link-margin{
   margin: 20px;
 }
+
+/*-------------------------STYLING FOR EACH ICON---------------------------- */
 
 td button{
   border: none;
@@ -74,11 +84,12 @@ td button{
   background: transparent;
 }
 
+/*-------------------------SEARCH---------------------------- */
+
 .search-div{
   width: 400px;
   margin: 50px
 }
-
 
 .search-bar{
   background-color: transparent;
@@ -92,6 +103,8 @@ td button{
   color: white;
 }
 
+/*-------------------------MOVIES IN TABLE---------------------------- */
+
 .table-movies{
   width: 100%;
   min-height: 100vh;
@@ -101,6 +114,8 @@ td button{
   flex-direction: column;
   color: white;
 }
+
+/*-------------------------PROFILE-PICTURE IN TABLE---------------------------- */
 
 .nacho{
   border-radius: 50%;
@@ -116,6 +131,7 @@ td button{
   justify-content: center;
 }
 
+/*-------------------------STYLING TABLE---------------------------- */
 th {
   text-align: left;
 }
@@ -134,6 +150,7 @@ th{
   margin-bottom: 40px;
 }
 
+/*--------------------PAGE WHEN YOU ARE ADD A MOVIE----------------------- */
 .add-movie-background{
   width: 100%;
   height: 400px;
@@ -150,7 +167,6 @@ th{
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* background-color: darkred; */
 }
 
 .input-style{
@@ -228,30 +244,46 @@ th{
   transform: translateX(0%);
 }
 
+/*-------------------------DETAILS-PAGE FOR MOVIE---------------------------- */
 
 .details{
   width: 100%;
   min-height: 100vh;
-  background-color: red;
+  background-color: black;
   color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .details-list{
+  padding-top: 30px;
   color: white;
-  background-color: gray;
+  font-size: 30px;
+  background-color: black;
   width: 60%;
   height: 600px;
   text-align: center;
 }
+
+.details-list button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.details-list button p {
+  font-size: 16px;
+  text-decoration: none;
+}
+
 
 .details-list li{
   list-style: none;
   margin: 10px;
 }
 
-.background{
+/*-------------------------BACKGROUND FOR POPUP---------------------------- */
+.popup-background{
   width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0,0.6);
@@ -261,17 +293,52 @@ th{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
+/*------------------INSIDE POPUP--------------------- */
 .popup{
-  background-color: red;
+  /* background-color: red; */
+  background: linear-gradient(0deg, #e52d27 0%, #6f0000 100%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 300px;
   height: 300px;
   position: absolute;
-  z-index: 1;
+  border: solid 1px white;
+  top: -300px;
+  animation: drop 0.5s ease forwards;
 }
 
+.popup p{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.popup button{
+  transform: translateY(60px);
+  width: 180px;
+  height: 30px;
+  border-radius: 10px;
+  outline-color: darkred;
+  color: red;
+  font-size: 20px;
+  font-weight: 300;
+  border: none;
+  box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.60);
+}
+
+/*-------ANIMATING POPUP------- */
+@keyframes drop {
+ 0%{opacity: 0}
+ 70%{transform: translateY(500px)}
+ 100%{transform: translateY(450px); opacity: 1}
+}
+
+/*-------------------------ERROR FOR MAINPAGE---------------------------- */
 .load-error{
   width: 500px;
   height: 200px;
@@ -286,11 +353,13 @@ th{
   color: white;
 }
 
+/*-------------------------ERROR WHEN USER CHANGES ID------------------------ */
 .edit-movie-no-id{
   color: white;
   font-size: 32px;
 }
 
+/*------------------ERROR WRONG INPUT WHEN ADDING MOVIE---------------------- */
 .wrong-input{
   color: white;
   font-size: 20px;

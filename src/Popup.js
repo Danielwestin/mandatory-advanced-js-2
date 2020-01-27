@@ -14,10 +14,11 @@ class Add extends React.Component {
 
   render(){
     return ReactDOM.createPortal(
-      <div className="background">
+      <div className="popup-background">
         <div className="popup">
-          <MaterialIcon icon="error"/>
-          <button onClick={this.props.closePopup}> Cancel </button>
+          <MaterialIcon icon="error" size={75} color="#FFFFFF"/>
+          <p>This movie is already deleted</p>
+          <button onClick={this.props.closePopup}>Cancel</button>
         </div>
       </div>,
       document.querySelector("body")
