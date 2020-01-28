@@ -27,6 +27,7 @@ updateState = (e) => {
 }
 
 sendMovie = () => {
+
   axios.post("http://3.120.96.16:3001/movies", this.state.movie)
     .then(() => {
       this.setState({redirect: true})
