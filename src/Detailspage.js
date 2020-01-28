@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Link} from 'react-router-dom'
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import axios from 'axios';
 import MaterialIcon from 'material-icons-react';
 

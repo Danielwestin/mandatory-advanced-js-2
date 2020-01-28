@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import MaterialIcon from 'material-icons-react';
 import Popup from './Popup';
 
@@ -94,6 +94,7 @@ class Main extends React.Component {
                 movie.director.toLowerCase().includes(this.state.filter)){
               return movie;
             }
+              return null;
           })
           .map(movie =>
             <tr key={movie.id}>

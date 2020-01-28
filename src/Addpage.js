@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Redirect} from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import axios from 'axios'
 
 
