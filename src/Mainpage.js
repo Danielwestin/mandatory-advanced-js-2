@@ -29,6 +29,17 @@ class Main extends React.Component {
     this.getMovies();
   }
 
+  deleteMovie = (id) => {
+    axios.delete(`http://3.120.96.16:3001/movies/${id}`)
+      .then(() => {
+        this.getMovies();
+      })
+      .catch(() => {
+        console.log("movie is already gone");
+        this.getMovies();
+      })
+  }
+
   filter = (e) => {
     e.preventDefault();
     this.setState({filter: e.target.value.toLowerCase()})
@@ -133,15 +144,7 @@ class Main extends React.Component {
 
               <td>
                 <button
-                  onClick={() => {axios.delete(`http://3.120.96.16:3001/movies/${movie.id}`)
-                    .then(() => {
-                      this.getMovies();
-                    })
-                    .catch(() => {
-                      console.log("movie is already gone");
-                      this.getMovies();
-                    })
-                  }}>
+                  onClick={() => this.deleteMovie(movie.id)}>
                   <MaterialIcon color="#FFFFFF" icon="delete_forever"/>
                 </button>
               </td>
